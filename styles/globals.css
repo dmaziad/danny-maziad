@@ -82,7 +82,6 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
@@ -98,6 +97,327 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font-style: italic
+}
+
+a:hover {
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #919191;
+  height: 50px;
+  width: 100%;
+  z-index: 3;
+}
+
+.hamburger-bar {
+  height: 5px;
+  width: 35px;
+  background-color: black;
+  margin: 6px 0;
+  border-radius: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+  transition: transform 1s, opacity 1s;
+}
+
+.bar1.open {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.bar2.open {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.bar3.open {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+.menu {
+  position: fixed;
+  display: block;
+  background: #fff;
+  left: -100vw;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  transition: transform 0.5s;
+}
+
+.menu.open {
+  transform: translateX(100vw);
+}
+
+.menu-button {
+  display: flex;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.menu-button button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu .nav-item {
+  font-style: normal;
+  list-style: none;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.menu .nav-items a {
+  display: block;
+  font-weight: bold;
+  transition: transform 0.5s;
+}
+
+.menu .nav-items a:hover {
+  text-decoration: underline;
+  transform: translate(3px, -2px);
+}
+
+nav .nav-items {
+  display: none;
+}
+
+nav .nav-item {
+  font-style: normal;
+  list-style: none;
+  font-weight: bold;
+}
+
+nav .nav-items a {
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+nav .nav-items a:hover {
+  text-decoration: underline;
+  transform: translate(3px, -2px);
+}
+
+.bio-link a {
+  font-weight: bold;
+}
+
+.bio-link a:hover {
+  text-decoration: underline;
+}
+
+li {
+  margin-left: 20px;
+  font-weight: lighter;
+}
+
+.name {
+  animation: 0.5s ease 0.25s fade;
+  animation-fill-mode: both;
+}
+
+.first-p {
+  animation: 0.5s ease 0.25s fadeAndSlide;
+  animation-fill-mode: both;
+}
+
+.second-p {
+  animation: 0.5s ease 0.5s fadeAndSlide;
+  animation-fill-mode: both;
+}
+
+.first-li {
+  animation: 0.5s ease 0.75s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.second-li {
+  animation: 0.5s ease 1.0s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.third-li {
+  animation: 0.5s ease 1.25s fadeAndSlide;
+  -webkit-animation: 0.5s ease 1.25s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.fourth-li {
+  animation: 0.5s ease 1.5s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.third-p {
+  animation: 0.5s ease 1.75s fadeAndSlide;
+  animation-fill-mode: both;
+}
+
+.fifth-li {
+  animation: 0.5s ease 2.0s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.fifth-li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.sixth-li {
+  animation: 0.5s linear 2.25s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.sixth-li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.seventh-li {
+  animation: 0.5s ease-in 2.5s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.seventh-li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+/* 
+ALTERNATE FASTER ANIMATIONS
+
+.name {
+  animation: 0.5s ease 0.1s fade;
+  animation-fill-mode: both;
+}
+
+.first-p {
+  animation: 0.5s ease 0.2s fadeAndSlide;
+  animation-fill-mode: both;
+}
+
+.second-p {
+  animation: 0.5s ease 0.3s fadeAndSlide;
+  animation-fill-mode: both;
+}
+
+.first-li {
+  animation: 0.5s ease 0.4s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.second-li {
+  animation: 0.5s ease 0.5s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.third-li {
+  animation: 0.5s ease 0.6s fadeAndSlide;
+  -webkit-animation: 0.5s ease 0.6s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.fourth-li {
+  animation: 0.5s ease 0.7s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.third-p {
+  animation: 0.5s ease 0.8s fadeAndSlide;
+  animation-fill-mode: both;
+}
+
+.fifth-li {
+  animation: 0.5s ease 0.9s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.fifth-li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.sixth-li {
+  animation: 0.5s linear 1s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.sixth-li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.seventh-li {
+  animation: 0.5s ease-in 1.1s fadeAndSlide;
+  animation-fill-mode: both;
+  padding-bottom: 1rem;
+}
+
+.seventh-li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+*/
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateY(100%)
+  }
+}
+
+@keyframes fadeAndSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 700px) {
+  .menu-button {
+    display: none;
+  }
+  
+  nav .nav-items {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-self: center;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
