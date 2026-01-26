@@ -32,9 +32,9 @@ export default function Home() {
         </div>
         <div className={styles.center} style={{paddingTop: 0}}>
           <p className={inter.className + ' bio-link'}>
-            Engineering Manager @&nbsp;
-            <a href="https://www.vicemediagroup.com/"  target="_blank" rel="noopener noreferrer">
-              VICE Media Group
+            Senior Software Engineer @&nbsp;
+            <a href="https://www.justvanilla.com/"  target="_blank" rel="noopener noreferrer">
+              Vanilla
             </a>
             .
           </p>
