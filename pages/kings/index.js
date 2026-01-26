@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 import styles from "../../styles/Content.module.css";
 import CommonLayout from "../../components/CommonLayout";
 
@@ -169,7 +169,7 @@ export default function KingsWeatherPage({ games, error }) {
           {/* optional; remove if you don't have this asset */}
           <Image
             className={styles.logo}
-            src="/nhl-kings.png"
+            src="/kings-logo.svg"
             alt="LA Kings"
             width={180}
             height={180}

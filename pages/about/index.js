@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Inter } from 'next/font/google'
 import styles from '../../styles/Content.module.css'
 import CommonLayout from '../../components/CommonLayout'
 
